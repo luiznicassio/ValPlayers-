@@ -1,0 +1,135 @@
+ .Perfil-player {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .Perfil-player-conteiner {
+            background-color: #1e2227;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .dados {
+            /* border: solid 1px red; */
+            display: flex;
+            border-bottom:solid 7px #727272;  
+            padding: 1.5em 0 0 0 ;
+
+        }
+
+        .foto-player {
+            background-image: url(../img/times/logo-mibr.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 25%;
+            display: flex;
+            justify-content: center;
+            margin: 0 15px 0 0 ;
+           
+        }
+
+        .foto-player img {
+    /* Cria o degradê na parte de baixo da foto */
+             mask-image: linear-gradient(to bottom, black 10%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+            }       
+        /* .foto-player img{
+             width:100px;
+            height: 100px; 
+        } */
+        .dados-player {
+            width: 80%;
+            padding: 1em;
+        }
+
+        #dados-nick {
+            font-size: 35px;
+            font-weight: 700;
+            margin-bottom: 3px;
+        }
+
+        #nacionalidade {
+            width: 20px;
+            margin-bottom: 10px;
+        }
+
+        .dados-info {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: solid 1px rgb(58, 60, 61);
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+        }
+
+        .dados-info img {
+            width: 30px;
+            height: 30px;
+        }
+
+        #time_atual {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        #achievements {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #achievements div {
+            max-width: 250px;
+            background-color: gold;
+            color: #ffffff;
+            text-align: center;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+            font-weight: 700;
+            font-size: 12px;
+        }
+
+    /* conquistas */
+
+ .conquistas {
+    background-color: #2a2e35; /* Um cinza levemente diferente do fundo principal */
+    height: 100px; /* Aumentei um pouco para dar respiro */
+    display: flex;
+    gap: 15px; /* Espaço entre os troféus */
+    padding: 0 20px; /* Afasta o primeiro troféu da borda esquerda */
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Cada quadrado do troféu */
+.conquista_item {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1e2227; /* Fundo interno mais escuro */
+    border: 2px solid #3a3c3d;
+    border-radius: 8px; /* Bordas arredondadas ficam mais modernas */
+    transition: all 0.3s ease; /* Suaviza a animação */
+    cursor: pointer;
+}
+
+/* Efeito ao passar o mouse */
+.conquista_item:hover {
+    border-color: gold; /* Muda a borda para dourado */
+    transform: translateY(-5px); /* O troféu "sobe" um pouquinho */
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2); /* Sombra dourada suave */
+}
+
+/* Ajuste das imagens dos troféus */
+.conquista_item img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); /* Sombra na própria imagem do troféu */
+}

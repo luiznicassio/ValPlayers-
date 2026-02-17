@@ -1,0 +1,35 @@
+:root{
+    --background-default: #20272f;
+    --font-color: #929a9e;
+    --font-default:"Google Sans", sans-serif;
+}
+
+body{
+    background-color: var(--background-default);
+    color: var(--font-color);
+    font-family: var(--font-default);
+}
+
+header{
+    padding:1em  2em;    
+    background-color: #323c47;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 12px 32px -1px rgba(0, 0, 0, 0.336);
+}
+header h1 strong{
+    font-weight: 800;
+    color:#abb6bb ;
+}
+
+.menu_header{
+    display: flex;
+}
+.menu_header_item{
+    font-size:14px;
+}
+.menu_header_item a{
+    color:var(--font-color);
+    text-decoration: none;
+}
