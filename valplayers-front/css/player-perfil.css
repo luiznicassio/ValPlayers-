@@ -8,6 +8,7 @@
             background-color: #1e2227;
             max-width: 1000px;
             width: 100%;
+            margin-top: 50px;
         }
 
         .dados {
@@ -19,20 +20,24 @@
         }
 
         .foto-player {
-            background-image: url(../img/times/logo-mibr.png);
+             background-image: url(); 
             background-repeat: no-repeat;
-            background-position: center;
+            background-position-x: center;
+
             width: 25%;
             display: flex;
             justify-content: center;
             margin: 0 15px 0 0 ;
+            height: auto;
            
         }
 
-        .foto-player img {
+        .foto-player img {           
+             object-fit: contain;
+             margin-left: 15px;
     /* Cria o degradê na parte de baixo da foto */
              mask-image: linear-gradient(to bottom, black 10%, transparent 100%);
-            -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
             }       
         /* .foto-player img{
              width:100px;
@@ -96,40 +101,65 @@
     /* conquistas */
 
  .conquistas {
-    background-color: #2a2e35; /* Um cinza levemente diferente do fundo principal */
-    height: 100px; /* Aumentei um pouco para dar respiro */
+    background-color: #2a2e35;
+    
     display: flex;
-    gap: 15px; /* Espaço entre os troféus */
-    padding: 0 20px; /* Afasta o primeiro troféu da borda esquerda */
+    gap: 15px;
+    padding: 0 10px;
     align-items: center;
-    overflow: hidden;
+    
+    /* Ativa a rolagem horizontal */
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
-/* Cada quadrado do troféu */
+/* Cada quadrado do troféu com tamanho BLINDADO */
 .conquista_item {
+    /* Força o tamanho exato */
     width: 80px;
     height: 80px;
+    
+    /* Impede que o Flexbox diminua ou aumente o item */
+    flex: 0 0 80px; 
+    
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #1e2227; /* Fundo interno mais escuro */
+    background-color: #1e2227;
     border: 2px solid #3a3c3d;
-    border-radius: 8px; /* Bordas arredondadas ficam mais modernas */
-    transition: all 0.3s ease; /* Suaviza a animação */
+    border-radius: 8px;
+    transition: all 0.3s ease;
     cursor: pointer;
+    margin: 10px 0px;
 }
 
 /* Efeito ao passar o mouse */
 .conquista_item:hover {
-    border-color: gold; /* Muda a borda para dourado */
-    transform: translateY(-5px); /* O troféu "sobe" um pouquinho */
-    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2); /* Sombra dourada suave */
+    border-color: gold;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
 }
 
-/* Ajuste das imagens dos troféus */
+/* Garante que a imagem caiba no 80x80 sem deformar */
 .conquista_item img {
-    width: 60%;
-    height: 60%;
+    max-width: 70px; /* Tamanho controlado para não encostar na borda */
+    max-height: 70px;
     object-fit: contain;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); /* Sombra na própria imagem do troféu */
+}
+
+/* Scrollbar fina para não roubar espaço do 80x80 */
+.conquistas::-webkit-scrollbar {
+    height: 6px;
+}
+
+.conquistas::-webkit-scrollbar-track {
+    background: #1e2227;
+}
+
+.conquistas::-webkit-scrollbar-thumb {
+    background: #4a4f58;
+    border-radius: 10px;
+}
+.conquistas::-webkit-scrollbar-thumb:hover {
+   background: #ff4655; /* Cor do Valorant ou Gold para combinar */
 }

@@ -1,4 +1,5 @@
     main{
+    
             display: flex;
             justify-content: center;
         }
@@ -9,6 +10,7 @@
             max-width: 1000px;
             display: flex;
             flex-direction: column;
+            margin-top: 50px;
         }
         #titulo_liga{
            
@@ -58,3 +60,65 @@
             border-color: #6500a8;                   /* Borda na cor padrão do Valorant */
             transform: translateY(-3px);            /* Levanta o card levemente */
         }
+        
+     .jogadores{
+         padding: 1em 2em;     
+        }   
+       
+
+
+/*-- -- remove estilo padrão da lista -- --*/
+#lista_jogadores {
+    list-style: none;
+    padding: 0;
+}
+
+/* card do jogador */
+.jogador-item {
+    margin-bottom: 12px;
+    /* width: 500px; */
+}
+
+/* link vira um card */
+.item_jogadores {
+    display: flex;
+    align-items: center;
+    gap: 12px; 
+
+    background: #1e293b;          /* fundo */
+    color: #fff;
+    text-decoration: none;
+
+    padding: 10px 14px;
+    border-radius: 10px;
+
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+/* efeito hover bonito */
+.item_jogadores:hover {
+    background: #334155;
+    transform: translateX(4px);
+}
+
+/* foto do player */
+.foto-player {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+
+    transition: transform 0.25s ease;
+}
+
+/* animação leve na imagem */
+.item_jogadores:hover .foto-player {
+    transform: scale(1.05);
+}
+
+/* nick */
+.nick-player {
+    font-weight: 600;
+    font-size: 15px;
+}
+      
